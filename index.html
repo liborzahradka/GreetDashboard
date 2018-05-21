@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- Website Title & Description for Search Engine purposes -->
+    <meta charset="utf-8">
+		<title>Greet | Dashboard</title>
+    <meta name="description" content="Build a Wikipedia Viewer">
+    <meta name="author" content="Libor Zahradka">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+		<!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/data-modal.css">
+    <link rel="stylesheet" href="css/elements.css">
+		<link rel="stylesheet" href="css/home.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/extras/jquery.newsTicker.min.js"></script>
+    <script type="text/javascript" src="js/extras/jquery.timeago.js"></script>
+    <script type="text/javascript" src="js/extras/sparkline.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/home.js"></script>
+
+	</head>
+	<body>
+    <nav>
+      <div class="row nav top-nav">
+        <div class="logo">
+          <a href="/"><img src="images/logo.png" alt="Greet Logo"></a>
+        </div>
+      </div>
+      <div class="row nav middle-nav">
+        <div class="page-widget">
+           <img src="images/greet-page.png" alt="Greet Facebook Page">
+           <span class="inline">Greet</span>
+        </div>
+      </div>
+      <div class="row nav bottom-nav">
+        <ul class="list">
+          <a href="/admin"><li class="active">Insights</li></a>
+          <a href="/admin/posts"><li>Posts</li></a>
+          <a href="/admin/settings"><li>Settings</li></a>
+          <a href="#"><li class="tag-search-btn"><i class="fas fa-search"></i>Search Tags</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="notification" id="news" data-target="#lab-slide-bottom-popup">
+      <ul class="newsticker">
+        <li>
+          <i class="icon-flash ticker-image ticker-wrapper"></i>
+          This week has been better than average...
+        </li>
+        <li>
+          <img src="https://png.icons8.com/material/48/2B9CF9/online.png" width="14px"></img>
+          Your customers are tagging more friends than usual. There's an  <i class="fa fa-arrow-circle-o-up text-success mr-1"></i> 8% increase in in evangelism.
+        </li>
+        <li>
+          <img src="https://png.icons8.com/material/48/2ecc71/like.png" width="14px"></img>
+          More positive feedback recently. Sentiment on posts is up  <i class="fa fa-arrow-circle-o-up text-success mr-1"></i> 6% since yesterday.
+        </li>
+        <li>
+          <img src="https://png.icons8.com/material/48/9D7CC1/collaboration.png" width="14px"></img>
+          Conversations per post are down a little compared to last week.
+        </li>
+        <li>
+          <img src="https://png.icons8.com/material/48/F93E2B/filled-flag.png" width="14px"></img>
+          There are 19 open customer leads in the pipeline. You're  <i class="fa fa-arrow-circle-o-down text-failure mr-1"></i> 12% less responsive than last week.
+        </li>
+      </ul>
+    </div>
+
+    <div class="main stats">
+      <div class="data-menu">
+        <li>Insights Summary</li>
+        <a href="#" id="export_csv">Export to CSV</a>
+        <select class="post-list">
+          <!-- <option value="year">Past 1 Year</option> -->
+          <option value="month" selected>Past 30 Days</option>
+          <option value="two_weeks">Past 14 Days</option>
+          <option value="week">Past 7 Days</option>
+          <option value="today">Today</option>
+        </select>
+      </div>
+
+      <div class="echo-data"></div>
+
+      <div class="data-menu">
+        <li>Insights Summary | Per Post</li>
+      </div>
+      <div class="echo-data-per-post"></div>
+    </div>
+
+    <div class="modal-data">
+      <div class="modal-wrapper">
+        <div class="header">
+          <img src="images/logo.png" alt="Greet Logo">
+          <i class="fa fa-times modal-close"></i>
+        </div>
+        <div class="modal-content">
+          <div class="intents">
+            <select>
+              <!-- <option value="year">Past 1 Year</option> -->
+              <option value="month" selected>Past 30 Days</option>
+              <option value="two_weeks">Past 14 Days</option>
+              <option value="week">Past 7 Days</option>
+              <option value="today">Today</option>
+            </select>
+            <h1>Insights Groups</h1>
+            <ul class="list"></ul>
+          </div>
+          <div class="messages">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-search">
+      <div class="tag-header">
+        <i class="fas fa-times close-search"></i>
+        <div class="logo">
+          <a href="/"><img src="images/logo.png" alt="Greet Logo"></a>
+        </div>
+        <input id="search-val" type="search" placeholder="Search for Tags...">
+        <div class="instructions">
+          <select class="tag-date">
+            <!-- <option value="year">Past 1 Year</option> -->
+            <option value="month" selected>Past 30 Days</option>
+            <option value="two_weeks">Past 14 Days</option>
+            <option value="week">Past 7 Days</option>
+            <option value="today">Today</option>
+          </select>
+          <p id="key">Press Enter to Search</p>
+        </div>
+      </div>
+      <div class="tag-results">
+      </div>
+    </div>
+
+	</body>
+</html>

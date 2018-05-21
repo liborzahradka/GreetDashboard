@@ -1,0 +1,124 @@
+.modal-data {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-data .modal-wrapper {
+  width: 80%;
+  height: calc(100% - 100px);
+  margin: 50px 10%;
+  background: #fff;
+}
+.modal-data .modal-wrapper .header {
+  padding: 10px 10px;
+}
+.modal-data .modal-wrapper .header img {
+  width: 35px;
+}
+.modal-data .modal-wrapper .header i {
+  float: right;
+  cursor: pointer;
+}
+.modal-data .modal-wrapper .modal-content {
+  display: grid;
+  grid-template-columns: 250px auto;
+  height: calc(100% - 52px);
+}
+.modal-data .modal-wrapper .modal-content .intents, .modal-data .modal-wrapper .modal-content .messages {
+  overflow: scroll;
+  padding: 25px 0;
+}
+.modal-data .modal-wrapper .modal-content .intents {
+  background-color: #FAFAFA;
+}
+.modal-data .modal-wrapper .modal-content .intents select {
+  float: none;
+  margin: 5px 12px;
+}
+.modal-data .modal-wrapper .modal-content .intents ul {
+  padding: 20px 0;
+  margin: 0;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li {
+  list-style-type: none;
+  font-size: 12px;
+  padding: 10px 30px;
+  border-bottom: 1px solid #eef1f6;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li:hover, .modal-data .modal-wrapper .modal-content .intents ul li.active {
+  background-color: #f7f8fb;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li.active {
+  border-left: 4px solid #8360aa;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li p, .modal-data .modal-wrapper .modal-content .intents ul li span {
+  display: inline;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li p {
+  text-transform: capitalize;
+}
+.modal-data .modal-wrapper .modal-content .intents ul li span {
+  float: right;
+  color: #a5a5a5;
+  font-size: 10;
+}
+.modal-data .modal-wrapper .modal-content .messages .message {
+  display: grid;
+  grid-template-columns: auto 100px;
+  border-bottom: 1px solid #eef1f6;
+  padding: 10px;
+  min-height: 65px;
+}
+.modal-data .modal-wrapper .modal-content .messages .question, .modal-data .modal-wrapper .modal-content .messages .answer {
+  width: 75%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.modal-data .modal-wrapper .modal-content .messages .question img, .modal-data .modal-wrapper .modal-content .messages .answer img {
+  width: 30px;
+}
+.modal-data .modal-wrapper .modal-content .messages .question p, .modal-data .modal-wrapper .modal-content .messages .answer p {
+  margin: 1px 0 0;
+}
+.modal-data .modal-wrapper .modal-content .messages .question {
+  display: grid;
+  grid-template-columns: 40px auto;
+}
+.modal-data .modal-wrapper .modal-content .messages .question i {
+  color: #9c7bc1;
+  font-size: 24px;
+  margin: 12px 0;
+}
+.modal-data .modal-wrapper .modal-content .messages .answer {
+  background-color: #9c7bc1;
+  color: #fff;
+  margin-left: auto;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras {
+  padding: 5px 10px;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras time, .modal-data .modal-wrapper .modal-content .messages .extras i {
+  display: block;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras time.timeago {
+  font-size: 11px;
+  color: #c5c5c5;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras a {
+  color: #c5c5c5;
+  font-size: 16px;
+  transition: color 1s;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras a i {
+  margin-top: 10px;
+}
+.modal-data .modal-wrapper .modal-content .messages .extras a:hover {
+  color: #69778c;
+}
