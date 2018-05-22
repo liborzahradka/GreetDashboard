@@ -9,7 +9,6 @@ You can find full product on [greet.chat](https://www.greet.chat/) or [GitHub](h
 This is only example of functions on GREET platform.
 
 ```
--
 - Plugs into your social channels to import customer service questions and requests.
 - Uses machine-learning to identify & categorize questions by frequency and similarity.
 - Provides a dashboard to aggregate and uncover customer service questions over time
