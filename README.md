@@ -1,9 +1,9 @@
-# GREET | DASHBOARD (DEMO)
+# GREET | DASHBOARD DEMO
 ![Demo](demo.png)
 
 Use artificial intelligence to organize customer questions on social media.
 
-You can find full product on [greet.chat](https://www.greet.chat/) or [GitHub](https://liborzahradka.github.io/greet_dashboard/).
+You can find full product on [greet.chat](https://www.greet.chat/) or [GitHub](https://liborzahradka.github.io/GreetDashboard/).
 
 ### Explanation
 
