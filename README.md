@@ -1,4 +1,5 @@
 # GREET | DASHBOARD (DEMO)
+![Demo](demo.png)
 
 Use artificial intelligence to organize customer questions on social media.
 
