@@ -1,10 +1,7 @@
 # GREET | DASHBOARD (DEMO)
 
 Use artificial intelligence to organize customer questions on social media.
-
-## Getting Started
-
-You can find full product on [greet.chat](https://www.greet.chat/)
+You can find full product on [greet.chat](https://www.greet.chat/) or [GitHub](https://liborzahradka.github.io/greet_dashboard/).
 
 ### Explanation
 
